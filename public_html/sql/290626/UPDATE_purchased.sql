@@ -1,0 +1,1 @@
+UPDATE `tblitems` SET `can_be_purchased` = 'can_be_purchased';

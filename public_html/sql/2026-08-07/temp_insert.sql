@@ -1,0 +1,1 @@
+INSERT INTO tblpur_approval_setting (name, related, department, setting, approval_type) VALUES ('Asset Request Approval', 'asset_request', 0, '[{"approver":"staff","staff":"1","action":"approve","amount":""}]', 0);

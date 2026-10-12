@@ -1,0 +1,70 @@
+1.0.3
+-	Update some minor errors, interface errors
+1.0.4
+-	BOM: Show more product codes before the product name
+-	MO: Show more product codes before the product name
+-	MO: Update Cost hour for manufacturing order
+-	MO: check available quantity before Mark as Planned
+-	MO: After Mark as Done Mo => Purchase price of product = Total Material Cost + Total Labour Cost
+-	Manufacturing module:
+-	Costing related Manufacturing order
+o	Total Material Cost + Total employee working cost + Total work center cost.
+o	Total employee working cost = Cost/Hour * Working time each work center
+o	Total work center cost = cost per hour on each work center * Working time each work center
+-	BOM: fix a component search bug on the management screen, allowing mass delete Component
+-	Fix bug related new template
+-	Fix bug when run on PHP 8.1
+-	Fix bugs on Dasboard, menu icon
+1.0.5
+-	Fix Some minor errors
+-	Product: Fix product when create new Product mark as "can be manufactured"
+-	MO: Allow add an extra material after a finished manufacture
+-	MO: Bom Change Logs: records related changes to material quantities when a Work Order is executed
+-	Work Order: Allow Task creation function in Work order
+Bugs
+-	Delete manufacturing order -> delete work order reference
+Manufacturing order 
+-	Allowed to change the actual quantity produced.
+
+
+24/04/2024
+Product: display Sales and Purchase tab base on "Can be sold" and "Can be purchased" option
+
+25/04/2024
+Work Order: fix bugs physical file have been deleted on Routing, mark as done MO have component 
+
+16/07/2024
+1.0.6: Calculate raw material prices based on warehouse prices
+
+17/07/2024
+1.0.7:
+- Setting: Add Approval setting for MO
+- MO: 
+	+ Add approval process for MO,
+	+ Send Web notifications and emails to the Mo implementer after the Mo is approved
+	
+1.0.8
+27_09_2024
+add "acc_mapping" column for accounting module
+
+02_10_2024:
+update error Black screen appearance when choosing on select box in Handsontable  (only RTL direction )
+
+
+03_01_2025:
+Manufacturing Order detail: show lot_number;expiry_date;serial_numbers for Component
+
+1.0.9
+10_02_2025
+Manufacturing Order: add option - Inventory receipt: create lot number from MO number
+
+19_03_2025
+Bill of Material: split the "Product" column into 2 separate columns, 1 column displays "Product code", 1 column displays "Product Name"
+
+1.1.0
+30_06_2025
+Integration with Quality module
+
+14_12_2025
+MO fix bug
+Fix qty_to_consume usage in Work Order mark done logic

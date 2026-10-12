@@ -1,0 +1,31 @@
+FILES TO UPLOAD TO 61 SERVER - 2026-06-30
+==========================================
+
+SQL FILES (run in order):
+1. sql/300626/fix_all_accounting_data.sql
+2. sql/300626/fix_activate_accounts_permanent.sql
+
+PHP FILES (copy to same path on server):
+1. modules/accounting/models/Accounting_model.php
+2. modules/accounting/helpers/Accounting_helper.php
+3. modules/accounting/views/report/details/general_ledger.php
+4. modules/accounting/views/report/details/journal.php
+5. modules/accounting/views/setting/mapping_setup.php
+6. modules/accounting/views/setting/ledger_mapping.php
+7. modules/accounting/controllers/Accounting.php
+8. modules/accounting/language/english/accounting_lang.php
+9. modules/purchase/models/Purchase_model.php
+10. modules/purchase/controllers/Purchase.php
+11. modules/purchase/views/items/table_item_list.php
+12. modules/purchase/views/items/item_detail.php
+13. modules/purchase/views/purchase_order/pur_order_preview.php
+14. modules/purchase/views/purchase_request/view_pur_request.php
+15. modules/purchase/assets/js/view_pur_request_js.php
+16. modules/purchase/language/english/purchase_lang.php
+17. modules/warehouse/views/view_commodity_detail.php
+18. application/views/admin/proposals/proposals_preview_template.php
+
+AFTER UPLOAD:
+- Run both SQL files on the 61 server database
+- Clear any caches (browser + server)
+- Enable GD extension in php.ini on server (uncomment ;extension=gd)

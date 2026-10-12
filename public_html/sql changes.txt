@@ -1,0 +1,1 @@
+ALTER TABLE `tblclients` ADD `sap_vendor_id` VARCHAR(100) NULL DEFAULT NULL AFTER `balance_as_of`;

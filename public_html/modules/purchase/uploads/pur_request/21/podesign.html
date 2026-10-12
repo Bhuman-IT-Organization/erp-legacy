@@ -1,0 +1,158 @@
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Purchase Order</title>
+</head>
+<body style="font-family: Arial, Helvetica, sans-serif; font-size:12px; color:#000;">
+
+    <!-- Header -->
+    <table style="width:100%; border-collapse:collapse;">
+        <tr>
+            <td style="width:60%; vertical-align:top;">
+                <h2 style="margin:0; padding:0;">Nextgen Printing & Packaging FZC</h2>
+                <p style="margin:3px 0;">
+                    PO Box 51474,<br>
+                    Freezone 2 Fujairah,<br>
+                    UAE<br>
+                    VAT NO: 104761108000003
+                </p>
+            </td>
+            <td style="width:40%; text-align:right;">
+                <h2 style="margin:0;">PURCHASE ORDER</h2>
+            </td>
+        </tr>
+    </table>
+
+    <hr style="border:1px solid #000;">
+
+    <!-- Vendor / PO Info -->
+    <table style="width:100%; border-collapse:collapse; margin-top:10px;">
+        <tr>
+            <td style="width:60%; vertical-align:top;">
+                <b>Vendor</b><br>
+                AL HIKAM BUILDING CONTRACTING LLC - Single Person<br>
+                04 SHARAH SALAM MERASHID<br>
+                FUJAIRAH, UAE
+            </td>
+
+            <td style="width:40%;">
+                <table style="width:100%; border-collapse:collapse;">
+                    <tr>
+                        <td style="border:1px solid #000; padding:5px;"><b>P.O Number</b></td>
+                        <td style="border:1px solid #000; padding:5px;">4500038826</td>
+                    </tr>
+                    <tr>
+                        <td style="border:1px solid #000; padding:5px;"><b>Date</b></td>
+                        <td style="border:1px solid #000; padding:5px;">16.04.2026</td>
+                    </tr>
+                    <tr>
+                        <td style="border:1px solid #000; padding:5px;"><b>Vendor Code</b></td>
+                        <td style="border:1px solid #000; padding:5px;">5000846</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+
+    <p style="margin-top:15px;">
+        We are pleased to order the following standard materials to be delivered:
+    </p>
+
+    <!-- Items Table -->
+    <table style="width:100%; border-collapse:collapse; margin-top:10px;">
+        <thead>
+            <tr style="background:#e5e5e5;">
+                <th style="border:1px solid #000; padding:6px;">S.No</th>
+                <th style="border:1px solid #000; padding:6px;">Description</th>
+                <th style="border:1px solid #000; padding:6px;">Qty</th>
+                <th style="border:1px solid #000; padding:6px;">UOM</th>
+                <th style="border:1px solid #000; padding:6px;">Price</th>
+                <th style="border:1px solid #000; padding:6px;">Amount</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            <?php foreach($items as $row){ ?>
+
+            <tr>
+                <td style="border:1px solid #000; padding:5px;">
+                    <?= $row['item_no']; ?>
+                </td>
+                <td style="border:1px solid #000; padding:5px;">
+                    <?= $row['description']; ?>
+                </td>
+                <td style="border:1px solid #000; padding:5px; text-align:center;">
+                    <?= $row['qty']; ?>
+                </td>
+                <td style="border:1px solid #000; padding:5px; text-align:center;">
+                    <?= $row['uom']; ?>
+                </td>
+                <td style="border:1px solid #000; padding:5px; text-align:right;">
+                    <?= number_format($row['price'],2); ?>
+                </td>
+                <td style="border:1px solid #000; padding:5px; text-align:right;">
+                    <?= number_format($row['amount'],2); ?>
+                </td>
+            </tr>
+
+            <?php } ?>
+
+        </tbody>
+    </table>
+
+    <!-- Total -->
+    <table style="width:100%; border-collapse:collapse; margin-top:10px;">
+        <tr>
+            <td style="width:75%;"></td>
+            <td style="width:25%;">
+                <table style="width:100%; border-collapse:collapse;">
+                    <tr>
+                        <td style="border:1px solid #000; padding:6px;">
+                            <b>Total Value AED</b>
+                        </td>
+                        <td style="border:1px solid #000; padding:6px; text-align:right;">
+                            <b>3,810.00</b>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+
+    <!-- Terms -->
+    <table style="width:100%; margin-top:15px;">
+        <tr>
+            <td>
+                <b>Payment Terms:</b> AP - Immediate Due
+            </td>
+        </tr>
+    </table>
+
+    <!-- Delivery & Billing -->
+    <table style="width:100%; border-collapse:collapse; margin-top:20px;">
+        <tr>
+            <td style="width:50%; border:1px solid #000; padding:10px; vertical-align:top;">
+                <b>Delivery Address</b><br><br>
+                Nextgen Printing & Packaging FZC<br>
+                PO Box 51474<br>
+                Freezone II, Fujairah, UAE
+            </td>
+
+            <td style="width:50%; border:1px solid #000; padding:10px; vertical-align:top;">
+                <b>Billing Address</b><br><br>
+                Nextgen Printing & Packaging FZC<br>
+                PO Box 51474<br>
+                Freezone 2 Fujairah, UAE
+            </td>
+        </tr>
+    </table>
+
+    <p style="margin-top:30px; text-align:center; font-size:11px;">
+        Computer Generated, No Signature Required
+    </p>
+
+</body>
+</html>
+```

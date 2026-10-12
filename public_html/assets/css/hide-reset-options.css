@@ -1,0 +1,23 @@
+/* Hide reset data options in all module settings */
+.btn-danger[onclick*="reset"], 
+.btn-danger[href*="reset"],
+a[href*="reset_data"],
+button[onclick*="reset_data"],
+.reset-data-btn,
+[data-toggle="modal"][data-target*="reset"],
+.btn[onclick*="confirm"][onclick*="reset"] {
+    display: none !important;
+}
+
+/* Hide reset data modal dialogs */
+.modal[id*="reset"],
+.modal .modal-title:contains("Reset"),
+.modal .modal-body:contains("reset") {
+    display: none !important;
+}
+
+/* Hide reset data menu items */
+.dropdown-menu li a[href*="reset"],
+.nav-tabs li a[href*="reset"] {
+    display: none !important;
+}
